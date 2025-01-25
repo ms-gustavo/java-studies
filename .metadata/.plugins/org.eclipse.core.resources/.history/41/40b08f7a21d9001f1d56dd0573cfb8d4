@@ -1,0 +1,33 @@
+package entities;
+
+public class Student {
+	
+	public String name;
+	public double firstQuarter;
+	public double secondQuarter;
+	public double thirdQuarter;
+
+	
+	public double sumPoints() {
+		return firstQuarter + secondQuarter + thirdQuarter;
+	}
+	
+	public String checkPoints() {
+		if (firstQuarter > 30 || secondQuarter > 35 || thirdQuarter > 35) {
+	}
+		return "Nota inválida";
+	}
+	
+	public String checkApprovation() {
+		String finalMessage = null;
+		double missingPoints;
+		if (this.sumPoints() > 60) {
+			finalMessage = "FINAL GRADE = " + this.sumPoints() + "\nPASS";
+		} else {
+			missingPoints = 60 - this.sumPoints();
+			finalMessage = "FINAL GRADE = " + this.sumPoints() + "\nFAILED\nMISSING " + missingPoints + "POINTS";
+		}
+		return finalMessage;
+	}
+	
+}

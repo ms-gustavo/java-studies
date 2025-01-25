@@ -1,0 +1,16 @@
+package entities;
+
+public class Students {
+
+	private String name;
+	private String email;
+	
+	public Students(String name, String email) {
+		this.name = name;
+		this.email = email;
+	}
+	
+	
+	
+	
+}

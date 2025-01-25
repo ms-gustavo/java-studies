@@ -1,0 +1,22 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Quantos números você vai digitar? ");
+		int n = sc.nextInt();
+		if (n > 10) {
+			sc.nextLine();
+			System.out.print("O número máximo é 10, digite novamente: ");
+			n = sc.nextInt();
+		}
+		System.out.println(n);
+	}
+
+}

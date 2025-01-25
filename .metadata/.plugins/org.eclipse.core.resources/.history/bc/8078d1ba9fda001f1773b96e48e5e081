@@ -1,0 +1,30 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Quantos números você vai digitar? ");
+		int n = sc.nextInt();
+		while (n > 10) {
+		    System.out.print("O número máximo é 10. Digite novamente: ");
+		    n = sc.nextInt();
+		}
+		double[] vect = new double[n];
+		
+		for(int i = 0; i<vect.length; i++) {
+			sc.nextLine();
+			System.out.println("Digite um número: ");
+			int number = sc.nextInt();
+			vect[i] = number;
+		}
+		
+		System.out.println(vect);
+	}
+
+}

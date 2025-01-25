@@ -1,0 +1,14 @@
+package curso_programacao;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int y = 32;
+		System.out.print(y);
+		System.out.print("Bom dia!");
+		System.out.print("Olá mundo!");
+
+	}
+
+}

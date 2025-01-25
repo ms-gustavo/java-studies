@@ -1,0 +1,42 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Rooms;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Rooms[] room = new Rooms[10];
+		
+		System.out.println("How many rooms will be rented? ");
+		int roomsToRent = sc.nextInt();
+		while (roomsToRent > 10 || roomsToRent < 0) {
+			System.out.println("Max rooms availables: 10");
+			roomsToRent = sc.nextInt();
+		}
+		for(int i = 0; i < roomsToRent; i++) {
+			sc.nextLine();
+			System.out.println("Name: ");
+			room[i].setName(sc.nextLine());
+			System.out.println("Email: ");
+			room[i].setEmail(sc.nextLine());
+			System.out.println("Desired room: ");
+			room[i].setRoomNumber(sc.nextInt());
+			if( room[room[i].getRoomNumber()].isRent()) {
+				System.out.println("This room is already occuped, choose another:");
+				room[i].setRoomNumber(sc.nextInt());
+			}
+					
+		}
+		for(int i = 0; i < room.length; i++) {
+			
+		}
+			
+		sc.close();
+
+	}
+
+}

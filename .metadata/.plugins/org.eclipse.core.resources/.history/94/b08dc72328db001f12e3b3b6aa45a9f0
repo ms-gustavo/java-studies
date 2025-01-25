@@ -1,0 +1,47 @@
+package entities;
+
+public class Rooms {
+
+	private int roomNumber;
+	private boolean isRent;
+	private String name;
+	private String email;
+	
+	public Rooms(int roomNumber) {
+		this.roomNumber = roomNumber;
+	}
+
+	public int getRoomNumber() {
+		return roomNumber;
+	}
+
+	public void setRoomNumber(int roomNumber) {
+		this.roomNumber = roomNumber;
+	}
+
+	public boolean isRent() {
+		return isRent;
+	}
+
+	public void setRent(boolean isRent) {
+		this.isRent = isRent;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
+}
