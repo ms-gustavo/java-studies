@@ -1,6 +1,7 @@
 package entities;
 
-public class SavingsAccount extends Account {
+//Não se cria subclasses de SavingsAccount com FINAL
+public final class SavingsAccount extends Account {
 
 	private Double interestRate;
 	
@@ -20,8 +21,8 @@ public class SavingsAccount extends Account {
 	public void setInterestRate(Double interestRate) {
 		this.interestRate = interestRate;
 	}
-	
-	public void updateBalance() {
+	//Não se faz Override de metodo com FINAL
+	public final void updateBalance() {
 		balance += balance * interestRate;
 	}
 
