@@ -6,6 +6,8 @@ public class Account {
 	private String holder;
 	protected Double balance;
 
+	private static final double FEE = 5.0;
+	
 	public Account() {
 
 	}
@@ -38,7 +40,7 @@ public class Account {
 	}
 
 	public void withdraw(double amount) {
-		balance -= amount;
+		balance -= amount + FEE;
 	}
 
 	public void deposit(double amount) {
